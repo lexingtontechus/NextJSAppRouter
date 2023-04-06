@@ -1,0 +1,33 @@
+{
+  "name": "clerknextjs",
+  "version": "1.0.0",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "build:tailwind": "tailwind build -i app/index.css",
+    "post-update": "yarn upgrade --latest"
+  },
+  "dependencies": {
+    "@clerk/nextjs": "^4.17.3",
+    "@clerk/themes": "^1.6.4",
+    "@nextui-org/react": "^1.0.0-beta.12",
+    "eslint-config-next": "^13.4.2",
+    "mini-css-extract-plugin": "^2.7.5",
+    "next": "^13.4.3",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "tailwindcss": "^3.3.2"
+  },
+  "license": "MIT",
+  "keywords": [
+    "next"
+  ],
+  "description": "Clerk NextJS Example",
+  "devDependencies": {
+    "autoprefixer": "^10.4.14",
+    "postcss": "^8.4.23",
+    "tailwindcss": "^3.3.2"
+  }
+}
