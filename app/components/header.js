@@ -1,5 +1,5 @@
 "use client";
-
+import Link from "next/link";
 import {
   SignInButton,
   SignIn,
@@ -17,21 +17,19 @@ const logoImage = ({ src, width, quality }) => {
 };
 
 const Header = () => (
-    <header className="flex justify-between px-8 whitespace-normal">
-      <h1>My App</h1>
-      <SignedIn>
-        {/* Mount the UserButton component */}
-        <UserButton />
-      </SignedIn>
-     
-        {/* Signed out users get sign in button */}
-      <SignInButton mode="modal">
-  <button className="btn">
-    Sign in
-  </button>
-</SignInButton>
-     
-    </header>
-  );
+  <div className="navbar flex justify-between px-8 whitespace-normal">
+     <div className="flex-1">
+    <Link className="btn btn-ghost normal-case text-xl" href="/">LOGO</Link>
+  </div>
+    <SignedIn>
+      {/* Mount the UserButton component */}
+      <UserButton />
+    </SignedIn>
+    {/* Signed out users get sign in button */}
+    <SignInButton mode="modal">
+      <button className="btn btn-secondary rounded-md">Sign in</button>
+    </SignInButton>
+  </div>
+);
 
 export default Header;
