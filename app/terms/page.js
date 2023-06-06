@@ -4,36 +4,28 @@ export const metadata = {
 };
 const Terms = () => {
   return (
-      <>
-      <div className="join join-vertical w-full">
-  <div className="collapse collapse-arrow join-item border border-base-300">
-    <input type="radio" name="my-accordion-4" checked="checked" /> 
-    <div className="collapse-title text-xl font-medium">
-      Click to open this one and close others
-    </div>
-    <div className="collapse-content"> 
-      <p>hello</p>
-    </div>
+    <>
+        <div className="text-4xl uppercase text-center my-2">
+          <h2>Terms</h2>
+          <h3> Last Updated 1 Jan {new Date().getFullYear()}</h3>
+        </div>
+        <div tabIndex={0} className="collapse  collapse-arrow bg-accent text-primary-content focus:bg-secondary focus:text-secondary-content my-2 rounded-md">
+  <div className="collapse-title">
+    Focus me to see content
   </div>
-  <div className="collapse collapse-arrow join-item border border-base-300">
-    <input type="radio" name="my-accordion-4" /> 
-    <div className="collapse-title text-xl font-medium">
-      Click to open this one and close others
-    </div>
-    <div className="collapse-content"> 
-      <p>hello</p>
-    </div>
+  <div className="collapse-content text-xs"> 
+    <p>tabIndex={0} attribute is necessary to make the div focusable</p>
   </div>
-  <div className="collapse collapse-arrow join-item border border-base-300">
-    <input type="radio" name="my-accordion-4" /> 
-    <div className="collapse-title text-xl font-medium">
-      Click to open this one and close others
-    </div>
-    <div className="collapse-content"> 
-      <p>hello</p>
-    </div>
+</div>
+<div tabIndex={1} className="collapse  collapse-arrow bg-primary text-primary-content focus:bg-secondary focus:text-secondary-content my-2 rounded-md">
+  <div className="collapse-title">
+    Focus me to see content
   </div>
-</div></>
+  <div className="collapse-content text-xs"> 
+    <p>tabIndex={1} attribute is necessary to make the div focusable</p>
+  </div>
+</div>
+        </>
   );
 };
 

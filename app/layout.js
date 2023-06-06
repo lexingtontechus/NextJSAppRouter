@@ -4,14 +4,7 @@ import Header from "./components/header";
 import Footer from "./components/footer";
 import "../styles/index.css";
 import "../styles/globals.css";
-
-import { Sora } from "next/font/google";
-
-// If loading a variable font, you don't need to specify the font weight
-const sora = Sora({
-  subsets: ["latin"],
-  display: "swap",
-});
+import {Providers} from "./providers";
 
 export const metadata = {
   title: {
@@ -33,12 +26,13 @@ export default function RootLayout({ children }) {
         },
       }}
     >
-      <html lang="en" className={sora.className}>
-        <body className="w-full px-8">
-          {/*className="w-full bg-blue-500 mx-auto"*/}
-          <Header />
+      <html lang="en" >
+        <body className="container w-full px-8">          {/*className="w-full bg-blue-500 mx-auto"*/}          
+          <Providers>
+            <Header />
           {children}
           <Footer />
+          </Providers>
         </body>
       </html>
     </ClerkProvider>
