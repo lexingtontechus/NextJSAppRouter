@@ -4,11 +4,11 @@ import Header from "./components/header";
 import Footer from "./components/footer";
 import "../styles/index.css";
 import "../styles/globals.css";
-import {Providers} from "./providers";
+import { Providers } from "./providers";
 
 export const metadata = {
   title: {
-    default: "Next.js App Router",
+    default: "Next.js App Router Template",
     template: "%s | Next.js App Router",
   },
   description:
@@ -26,12 +26,12 @@ export default function RootLayout({ children }) {
         },
       }}
     >
-      <html lang="en" >
-        <body className="container w-full px-8">          {/*className="w-full bg-blue-500 mx-auto"*/}          
+      <html lang="en">
+        <body>
           <Providers>
             <Header />
-          {children}
-          <Footer />
+            {children}
+            <Footer />
           </Providers>
         </body>
       </html>

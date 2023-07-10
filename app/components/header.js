@@ -19,12 +19,16 @@ const logoImage = ({ src, width, quality }) => {
 
 const Header = () => (
   <div className="navbar flex justify-between px-8 whitespace-normal">
-     <div className="flex-1">
-    <Link className="btn btn-ghost normal-case text-xl" href="/">LOGO</Link>
-  </div>
-  <div  className="mr-3">
-  <Switch/>
-  </div>
+     <div className="flex-1">  
+     <div className="avatar py-2">
+      <div className="w-8 h-8 rounded-full">
+        <Link href="/">
+          <img src="/logo_lxt.svg" />
+          </Link>
+      </div>
+      </div>
+      </div>
+ 
     <SignedIn>
       {/* Mount the UserButton component */}
       <UserButton />
@@ -33,6 +37,9 @@ const Header = () => (
     <SignInButton mode="modal">
       <button className="btn glass rounded-md">Sign in</button>
     </SignInButton>
+     <div className="ml-3">
+    <Switch/>
+  </div>
   </div>
 );
 
