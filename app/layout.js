@@ -1,9 +1,10 @@
 import { dark } from "@clerk/themes";
 import { ClerkProvider } from "@clerk/nextjs";
 import Header from "./components/header";
-
+import Footer from "./components/footer";
 import "../styles/index.css";
 import "../styles/globals.css";
+import {Providers} from "./providers";
 
 export const metadata = {
   title: {
@@ -16,11 +17,22 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <ClerkProvider>
-      <html lang="en">
-        <body className="w-full bg-primary-500 mx-auto">
-          <Header />
+    <ClerkProvider
+      appearance={{
+        baseTheme: dark,
+        variables: {
+          colorPrimary: "red",
+          colorText: "white",
+        },
+      }}
+    >
+      <html lang="en" >
+        <body className="container w-full px-8">          {/*className="w-full bg-blue-500 mx-auto"*/}          
+          <Providers>
+            <Header />
           {children}
+          <Footer />
+          </Providers>
         </body>
       </html>
     </ClerkProvider>

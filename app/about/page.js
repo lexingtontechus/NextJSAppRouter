@@ -1,6 +1,6 @@
 import Link from "next/link";
 
-const Home = () => {
+const About = () => {
   return (
     <>
       <div className="text-4xl">
@@ -12,4 +12,4 @@ const Home = () => {
   );
 };
 
-export default Home;
+export default About;
