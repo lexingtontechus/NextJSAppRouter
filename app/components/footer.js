@@ -18,12 +18,6 @@ export default function Footer(props) {
           <div className="flex flex-wrap items-center md:justify-between justify-center">
             <div className="w-full px-4">
               <div className="text-sm text-primary-100 font-semibold py-2 text-center">
-                <Link
-                  href="/"
-                  className="text-primary-100 text-sm font-semibold py-1 mr-2"
-                >
-                  0x
-                </Link>
                 Copyright © {new Date().getFullYear()}{" "}
                 <Link
                   href="/terms"

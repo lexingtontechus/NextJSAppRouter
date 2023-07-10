@@ -1,2 +1,6 @@
-# NextJS App Router Example ^@13
+# NextJS App Router Template ^@13
+
+## DaisyUI
+
+## Clerk Authentication
 
